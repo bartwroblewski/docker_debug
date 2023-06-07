@@ -7,5 +7,5 @@ RUN pip install flask
 RUN pip install ptvsd
 
 COPY app.py .
-CMD python -m ptvsd --host 0.0.0.0 --port 5678 --multiprocess app.py
-# ENTRYPOINT ["python", "app.py"]
+# CMD python -m ptvsd --host 0.0.0.0 --port 5678 --multiprocess app.py
+ENTRYPOINT ["python", "app.py"]
